@@ -1,0 +1,9 @@
+{
+  "name": "connectfour.js",
+  "version": "1.0.0",
+  "description": "A simple game logic for connect four",
+  "main": "./src/index.js",
+  "repository": "''",
+  "author": "MrYuto",
+  "license": "MIT"
+}
