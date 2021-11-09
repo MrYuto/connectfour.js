@@ -1,6 +1,6 @@
 {
   "name": "@mr.yuto/connectfour.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple game logic for connect four",
   "main": "./src/index.js",
   "repository": {
