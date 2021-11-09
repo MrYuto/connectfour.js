@@ -9,12 +9,22 @@ A simple Connect four game logic
 
 ## Install
 
+``` js
+npm install @mr.yuto/connectfour.js
+```
+
+OR
+
+```js
+yarn add @mr.yuto/connectfour.js
+```
+
 ## Usage
 
 Creating a game with two players:
 
 ```js
-const { ConnectFour } = require('ConnectFour.js');
+const { ConnectFour } = require('@mr.yuto/connectfour.js');
 
 const game = new ConnectFour({ boardWidth: 7, boardHeight: 6 });
 
