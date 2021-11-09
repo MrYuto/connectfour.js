@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/discordjs/discord.js"
+    "url": "https://github.com/MrYuto/connectfour.js"
   },
   "bugs": {
     "url": "https://github.com/MrYuto/connectfour.js/issues"
