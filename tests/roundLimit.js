@@ -14,5 +14,6 @@ try {
     playerA.dropBead(0);
   }
 } catch (error) {
-  console.log(error);
+  console.log(`\n${game.print()}`);
+  console.log('\nROUND_LIMIT');
 }

@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "A simple game logic for connect four",
   "main": "./src/index.js",
-  "repository": "''",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/discordjs/discord.js"
+  },
+  "bugs": {
+    "url": "https://github.com/MrYuto/connectfour.js/issues"
+  },
   "author": "MrYuto",
   "license": "MIT"
 }
