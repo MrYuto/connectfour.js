@@ -3,28 +3,28 @@ const Player = require('../Player');
 const Board = require('../Board');
 const Bead = require('../Bead');
 
-class Column {
+class Oblique {
   /**
-   * Represents a column of the game board
-   * @param {Board} board The column board
-   * @param {Bead[]} beads The column beads
+   * Represents a oblique line of the game board
+   * @param {Board} board The oblique board
+   * @param {Bead[]} beads The oblique beads
    */
   constructor(board, beads) {
     /**
-     * The column board
+     * The oblique board
      * @type Board
      */
     this.board = board;
 
     /**
-     * The column beads
+     * The oblique beads
      * @type Bead[]
      */
     this.beads = beads;
   }
 
   /**
-   * The column players
+   * The oblique players
    * @type Player[]
    */
   get players() {
@@ -32,7 +32,7 @@ class Column {
   }
 
   /**
-   * Get a empty bead from the column
+   * Get a empty bead from the oblique
    * @type Bead
    */
   get emptyBead() {
@@ -40,7 +40,7 @@ class Column {
   }
 
   /**
-   * Get the column winner if has
+   * Get the oblique winner if has
    * @type {Player | null}
    */
   get winner() {
@@ -61,4 +61,4 @@ class Column {
   }
 }
 
-module.exports = Column;
+module.exports = Oblique;

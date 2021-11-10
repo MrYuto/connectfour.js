@@ -11,6 +11,10 @@ const Round = require('./utils/Round');
  * @property {roundLimit} roundLimit The round limit for each player
  */
 
+/**
+ * The main class to create a game
+ * @extends {Board}
+ */
 class ConnectFour extends Board {
   /**
    * The options for the game
@@ -50,10 +54,17 @@ class ConnectFour extends Board {
    * @type {Player | null}
    */
   get winner() {
-    const columnWinner = this.columns.find((column) => column.winner)?.winner ?? null;
-    const rowWinner = this.rows.find((row) => row.winner)?.winner ?? null;
+    let winner = null;
 
-    return columnWinner ?? rowWinner;
+    const columnWinner = this.columns.find((column) => column.winner)?.winner;
+    const rowWinner = this.rows.find((row) => row.winner)?.winner;
+    const obliqueWinner = this.obliques.find((oblique) => oblique.winner)?.winner;
+
+    if (columnWinner) winner = columnWinner;
+    if (rowWinner) winner = rowWinner;
+    if (obliqueWinner) winner = obliqueWinner;
+
+    return winner;
   }
 
   /**

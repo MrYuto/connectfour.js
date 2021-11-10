@@ -1,6 +1,7 @@
+const { hasFourConnects } = require('./Util');
+const Player = require('../Player');
 const Board = require('../Board');
 const Bead = require('../Bead');
-
 class Row {
   /**
    * Represents a row of the game board
@@ -42,10 +43,20 @@ class Row {
    * @type {Player | null}
    */
   get winner() {
-    const winner = this.players.find((player) => this.beads.every((bead) => bead.playerId === player.id));
+    let winner = null;
 
-    if (winner) return winner;
-    return null;
+    this.players.forEach((player) => {
+      const beadIndexes = this.beads
+        .map((bead, index) => {
+          return { index, playerId: bead.player?.id };
+        })
+        .filter(({ playerId }) => playerId === player.id)
+        .map(({ index }) => index);
+
+      if (hasFourConnects(beadIndexes)) winner = player;
+    });
+
+    return winner;
   }
 }
 
